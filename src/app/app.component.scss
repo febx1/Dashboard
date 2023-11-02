@@ -1,0 +1,15 @@
+.left-nav-container{
+  width: 10vw;
+  overflow: hidden;
+}
+
+.main{
+  height: 90vh;
+  width: 95vw;
+  right: 0;
+  position: fixed;
+  padding: 4%;
+  display: grid;
+  grid-template-rows: 0.8fr 1.7fr 1fr;
+
+}
