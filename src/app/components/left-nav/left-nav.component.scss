@@ -1,29 +1,30 @@
 @import './../../../styles.scss';
+
 .left-nav {
-  left: 0;
-    position: absolute;
-    height: 100vh;
-    background-color: #ffffff;
-    width: 5vw;
+
+  height: 100vh;
+  background-color: #ffffff;
+  width: 5rem;
 
   .menu-list {
     list-style-type: none;
-    padding-inline-start:0 ;
+    padding-inline-start: 0;
     margin: 0;
-    li{
+
+    li {
       @extend .d-flex;
       @extend .justify-content-center;
       height: 4rem;
-      &.hamburger{
+
+      &.hamburger {
         background-color: $header-blue;
         margin-bottom: 3rem;
-        height: 10vh;
-        img{
+        height: 7.6vh;
+
+        img {
           filter: brightness(0) invert(1);
         }
       }
     }
   }
 }
-
-

@@ -1,0 +1,18 @@
+<div class="holder d-flex h-100 w-100 d-flex">
+
+  <div *ngFor="let item of cardData;let i = index;first as isFirst" [ngClass]="{'first':isFirst,'normal':!isFirst}" class="top-card">
+
+   <div class="card-head-row d-flex justify-content-between w-100">
+     <h2 class="card-head-row-headline" >
+       {{item.sub_header.split(' ')[0] }}
+      </h2>
+      <img src="./assets/icons/card{{i+1}}.svg" class="head-icon">
+    </div>
+    <h3 class="card-main-header">
+      {{item.header}}
+    </h3>
+    <h4 class="card-description">
+      {{item.sub_header}}
+    </h4>
+  </div>
+</div>

@@ -1,7 +1,18 @@
 
-<app-left-nav></app-left-nav>
-<app-header></app-header>
-<div class="main">
-  hello
+<div class="holder d-flex">
+
+  <app-left-nav></app-left-nav>
+
+  <div class="body-container w-100 ">
+    <app-header></app-header>
+    <div class="main d-flex flex-column">
+     <div class="flex-item-1">
+      <app-top-cards [cardData]="dashboardData.top_cards"></app-top-cards>
+     </div>
+     <div class="flex-item-2"></div>
+     <div class="flex-item-3"></div>
+    </div>
+  </div>
 </div>
+
 

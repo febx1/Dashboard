@@ -1,15 +1,25 @@
-.left-nav-container{
-  width: 10vw;
-  overflow: hidden;
-}
+.main {
+  height: calc(100vh - 7.6vh);
+  width: 100%;
+  padding: 3% 3% 1.5%;
+gap:1.4rem;
+  .flex-item {
+    &-1 {
 
-.main{
-  height: 90vh;
-  width: 95vw;
-  right: 0;
-  position: fixed;
-  padding: 4%;
-  display: grid;
-  grid-template-rows: 0.8fr 1.7fr 1fr;
+      flex-basis: 20%;
+    }
+
+    &-2 {
+      background-color: blue;
+      flex-basis: 50%;
+
+    }
+
+    &-3 {
+      background-color:green;
+      flex-basis: 30%;
+    }
+
+  }
 
 }

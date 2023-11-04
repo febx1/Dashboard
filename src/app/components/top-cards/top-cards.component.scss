@@ -1,0 +1,59 @@
+.holder {
+  gap: 1rem;
+
+
+  .first {
+    color: white;
+    background-color: #506de2;
+    .head-icon{
+      filter:invert(1);
+      opacity: 0.4;
+    }
+  }
+
+  .normal {
+    background-color: white;
+
+    h2 {
+      color: #506de2
+    }
+    h3,h4{
+      color:#717586;
+    }
+    .head-icon{
+      opacity: 0.2;
+    }
+  }
+
+  .top-card {
+    height: 100%;
+    flex-basis: 25%;
+    border-radius: 4px;
+    padding: 1.4rem;
+    // color: white;
+
+
+    .card {
+      &-head-row {
+
+        &-headline {
+          font-family: 'AwanZaman Medium';
+          font-size: 3.5rem;
+        }
+
+        .head-icon {
+          width: 3rem;
+        }
+      }
+
+      &-main-header {
+        font-size: 1.5rem;
+        // font-family: 'AwanZaman Medium';
+      }
+
+      &-description {
+        font-size: 1rem;
+      }
+    }
+  }
+}
