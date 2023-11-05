@@ -1,5 +1,10 @@
 @import './../../../styles.scss';
 
+* {
+  @extend .font-instrument-san;
+
+}
+
 .header-bar {
   height: 7.6vh;
   width: 100%;
@@ -35,17 +40,23 @@
     height: 1.7rem;
 
     &:focus-visible {
-      outline-color: $header-blue;
+      outline-color: $base-blue;
     }
   }
 
   .right {
+    margin-right: 1rem;
 
     .profile {
       width: 2rem;
       height: 2rem;
       margin: 0 0.5rem 0 0.5rem;
       border-radius: 0.2rem;
+    }
+
+    .user {
+      white-space: nowrap;
+      align-self: center;
     }
 
     .icon-small {

@@ -28,3 +28,10 @@ export interface RecentOrder {
   tracking_no: string
   shipping: boolean
 }
+
+
+export interface PopupModalData {
+  customerName: string,
+  product: string,
+
+}

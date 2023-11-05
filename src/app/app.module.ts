@@ -6,17 +6,28 @@ import { LeftNavComponent } from './components/left-nav/left-nav.component';
 import { HeaderComponent } from './components/header/header.component';
 import { HttpClientModule } from '@angular/common/http';
 import { TopCardsComponent } from './components/top-cards/top-cards.component';
+import { DasbhboardTableComponent } from './components/dasbhboard-table/dasbhboard-table.component';
+import { RecentOrdersModalComponent } from './components/dasbhboard-table/recent-orders-modal/recent-orders-modal.component';
+import { NewuserTableComponent } from './components/newuser-table/newuser-table.component';
+import { DashboardChartsComponent } from './components/dashboard-charts/dashboard-charts.component';
+import { NgApexchartsModule } from 'ng-apexcharts';
 
 @NgModule({
   declarations: [
     AppComponent,
     LeftNavComponent,
     HeaderComponent,
-    TopCardsComponent
+    TopCardsComponent,
+    DasbhboardTableComponent,
+    RecentOrdersModalComponent,
+    NewuserTableComponent,
+    DashboardChartsComponent,
+
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    NgApexchartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

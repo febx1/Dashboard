@@ -1,5 +1,6 @@
 @import './../../../styles.scss';
 
+
 .left-nav {
 
   height: 100vh;
@@ -17,8 +18,7 @@
       height: 4rem;
 
       &.hamburger {
-        background-color: $header-blue;
-        margin-bottom: 3rem;
+        background-color: $base-blue;
         height: 7.6vh;
 
         img {

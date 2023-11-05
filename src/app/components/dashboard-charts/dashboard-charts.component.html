@@ -1,0 +1,30 @@
+<div class="holder w-100 h-100 d-flex ">
+  <div class="graph-holder-1 d-column p-1">
+    <h4>New User Registrations</h4>
+
+    <div id="chart">
+      <apx-chart [series]="areaChartOptions.series!" [chart]="areaChartOptions.chart!" [xaxis]="areaChartOptions.xaxis!"
+      [stroke]="areaChartOptions.stroke!" [tooltip]="areaChartOptions.tooltip!"
+      [dataLabels]="areaChartOptions.dataLabels!"></apx-chart>
+    </div>
+  </div>
+
+  <div class="graph-holder-2">
+    <h4>Balance Overview</h4>
+    <apx-chart
+    [series]="columnChartOptions.series!"
+    [chart]="columnChartOptions.chart!"
+    [dataLabels]="columnChartOptions.dataLabels!"
+    [plotOptions]="columnChartOptions.plotOptions!"
+    [responsive]="columnChartOptions.responsive!"
+    [xaxis]="columnChartOptions.xaxis!"
+    [legend]="columnChartOptions.legend!"
+    [fill]="columnChartOptions.fill!"
+    ></apx-chart>
+  </div>
+  <div class="graph-holder-3">
+    <h4>Top Products</h4>
+
+  </div>
+
+</div>

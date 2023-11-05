@@ -1,0 +1,49 @@
+<table class="table">
+
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Customer</th>
+      <th scope="col">Products</th>
+      <th scope="col">Delivery Date</th>
+      <th scope="col">Status</th>
+      <th scope="col">Tracking No#</th>
+      <th scope="col">Shipping</th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let item of recentOrderList; let i = index">
+      <td>{{ 00 + i + 1 }}</td>
+      <td>{{ item.name }}</td>
+      <td>{{ item.product }}</td>
+      <td>{{ item.delivery_date| date: 'dd MMM, y'}}</td>
+
+      <td>
+        <div
+          class="p-1 rounded text-white text-center"
+          [ngClass]="getStatusClass(item.status)"
+        >
+          {{ item.status }}
+        </div>
+      </td>
+      <td>{{ item.tracking_no }}</td>
+      <td>{{ item.shipping ? "Yes" : "No" }}</td>
+      <td>
+        <img
+          (click)="onRowClick(item)"
+          src="./assets/icons/x.svg"
+          alt="close"
+        />
+      </td>
+    </tr>
+
+  </tbody>
+</table>
+
+<app-recent-orders-modal
+  (closeModalEvent)="hideModal()"
+  [customerInfo]="modalInfo"
+  *ngIf="showModal"
+></app-recent-orders-modal>

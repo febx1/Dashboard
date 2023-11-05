@@ -1,0 +1,25 @@
+@import './../../../styles.scss';
+
+
+.holder {
+  gap: 0.8rem;
+  &>* {
+    @extend %dashboard-card;
+    @extend .h-100;
+    padding: 1rem;
+  }
+
+  .graph-holder-1 {
+    flex-basis: 35%;
+  }
+
+  .graph-holder-2 {
+    flex-basis: 35%;
+
+  }
+
+  .graph-holder-3 {
+    flex-basis: 30%;
+  }
+
+}

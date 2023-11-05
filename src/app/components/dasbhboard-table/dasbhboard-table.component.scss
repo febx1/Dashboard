@@ -1,0 +1,19 @@
+@import './../../../styles.scss';
+
+* {
+
+  @extend .font-instrument-san;
+}
+
+
+.paid {
+  background-color: $green;
+}
+
+.pending {
+  background-color: $grey;
+}
+
+.failed {
+  background-color: $red;
+}

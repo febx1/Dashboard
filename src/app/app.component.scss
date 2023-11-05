@@ -1,23 +1,52 @@
+@import './../styles.scss';
+
+
 .main {
   height: calc(100vh - 7.6vh);
   width: 100%;
-  padding: 3% 3% 1.5%;
-gap:1.4rem;
+  padding: 2% 2% 1.5%;
+  gap: 1.4rem;
+
   .flex-item {
     &-1 {
-
-      flex-basis: 20%;
+      flex-basis: 17%;
+      max-height: 17%;
     }
 
     &-2 {
-      background-color: blue;
-      flex-basis: 50%;
+      flex-basis: 38%;
+      gap: 1rem;
+      max-height: 38.3%;
+
+      h4 {
+        @extend .font-nunito;
+        font-weight: 600;
+      }
+
+      .left-card {
+        flex-basis: 65%;
+        @extend %dashboard-card;
+
+
+      }
+
+      .right-card {
+        flex-basis: 35%;
+        @extend %dashboard-card;
+
+      }
+
+      .table-container {
+        overflow-y: auto;
+        max-height: 90%;
+      }
+
+
 
     }
 
     &-3 {
-      background-color:green;
-      flex-basis: 30%;
+      min-height: 42%;
     }
 
   }

@@ -9,8 +9,23 @@
      <div class="flex-item-1">
       <app-top-cards [cardData]="dashboardData.top_cards"></app-top-cards>
      </div>
-     <div class="flex-item-2"></div>
-     <div class="flex-item-3"></div>
+     <div class="flex-item-2 d-flex ">
+      <div class="left-card h-100 p-4">
+        <h4>Recent Orders</h4>
+        <div class="table-container">
+          <app-dasbhboard-table [recentOrderList]="dashboardData.recent_orders"></app-dasbhboard-table>
+        </div>
+      </div>
+      <div class="right-card h-100 p-4">
+        <h4>New User Registrations</h4>
+        <div class="table-container">
+          <app-newuser-table [newUserList]="dashboardData.new_users"></app-newuser-table>
+        </div>
+      </div>
+     </div>
+     <div class="flex-item-3">
+      <app-dashboard-charts></app-dashboard-charts>
+     </div>
     </div>
   </div>
 </div>
