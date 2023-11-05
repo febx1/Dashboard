@@ -11,17 +11,19 @@
         </div>
       </div>
     </td>
+
     <td class="d-flex">
       <div class="dashboard-progress-column ">
-
         <span class="dashboard-progress-bar" [ngClass]="getBackgroundColorClass(item.progress)" [style.width]="item.progress+'%'">
         </span>
       </div>
       <p>{{item.progress}}%</p>
     </td>
+
     <td>
       <button class="btn" [ngClass]="{'first':first,'secondary':!first}">More</button>
     </td>
+
   </tr>
 
 </table>

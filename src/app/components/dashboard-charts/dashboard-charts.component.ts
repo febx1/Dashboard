@@ -39,20 +39,21 @@ export class DashboardChartsComponent {
   public areaChartOptions: Partial<AreaChartOptions>;
   public columnChartOptions: Partial<ColumnChartOptions>;
   public donutChartOptions: Partial<DonutChartOptions>;
+
   constructor() {
     this.areaChartOptions = {
       series: [
         {
           color: '#6980e6',
 
-          name: "series1",
+          name: "Week 1",
           data: [31, 40, 28, 51, 42, 109, 100]
         },
         {
           type: 'currency',
           color: '#6980e6',
 
-          name: "series2",
+          name: "Week 2",
           data: [11, 35, 30, 45, 34, 52, 88]
         }
       ],

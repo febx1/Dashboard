@@ -8,8 +8,16 @@ import { PopupModalData, RecentOrder } from 'src/app/model/dashboard.model';
 })
 export class DasbhboardTableComponent {
   @Input() recentOrderList: RecentOrder[] = [];
+
   showModal = false;
   modalInfo!:PopupModalData;
+
+
+  /**
+   * returns the class as per the status
+   * @param status
+   * @returns
+   */
   getStatusClass(status: string) {
     return {
       'paid': status === 'Paid',
@@ -30,6 +38,8 @@ export class DasbhboardTableComponent {
     } ;
     this.showModal = true;
   }
+
+
 /**
  * upon click of okay button on modal parent component hides the modal component
  */

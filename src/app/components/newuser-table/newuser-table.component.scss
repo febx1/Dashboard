@@ -1,5 +1,6 @@
 @import './../../../styles.scss';
 
+
 .row-holder {
 
   .profile-image {
@@ -44,6 +45,7 @@
 
   .dashboard-progress-column {
     width: 10rem;
+    @include progress-bar-style;
 
     .dashboard-progress-bar {
       height: 5px;
@@ -65,26 +67,4 @@
     }
 
   }
-}
-
-.excellent{
-  background-color: $excellent;
-}
-.best{
-  background-color:$best-blue ;
-}
-.above-average{
-  background-color: $above-average-magenta;
-}
-.average{
-  background-color: $average-green;
-}
-.less-average{
-  background-color: $less-average-black;
-}
-.low{
-  background-color: $low-orange;
-}
-.very-low{
-  background-color:$very-low-red ;
 }

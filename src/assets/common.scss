@@ -18,3 +18,35 @@
   background-color: $base-white;
   border-radius: 4px;
 }
+
+@mixin progress-bar-style {
+
+  .excellent {
+    background-color: $excellent;
+  }
+
+  .best {
+    background-color: $best-blue ;
+  }
+
+  .above-average {
+    background-color: $above-average-magenta;
+  }
+
+  .average {
+    background-color: $average-green;
+  }
+
+  .less-average {
+    background-color: $less-average-black;
+  }
+
+  .low {
+    background-color: $low-orange;
+  }
+
+  .very-low {
+    background-color: $very-low-red ;
+  }
+
+}
