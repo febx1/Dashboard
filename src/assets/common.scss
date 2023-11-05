@@ -19,6 +19,13 @@
   border-radius: 4px;
 }
 
+%caret {
+  .caret{
+    width: 11px;
+    filter: opacity(0.3);
+  }
+}
+
 @mixin progress-bar-style {
 
   .excellent {

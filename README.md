@@ -16,3 +16,6 @@ npm install -f
 
 ![Alt text](image.png)
 
+## Order info popup
+
+![Alt text](image-1.png)

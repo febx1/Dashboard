@@ -81,9 +81,7 @@
       }
     }
 
-    .caret {
-      width: 11px;
-      filter: opacity(0.3);
-    }
+    @extend %caret;
+
   }
 }

@@ -1,35 +1,33 @@
 <div class="holder w-100  d-flex ">
-  <div class="graph-holder-1 p-4">
-    <h4>New User Registrations</h4>
+  <div class="graph-holder-1 p-4 ">
+    <div class="d-flex align-items-center justify-content-between">
+      <h4 class="d-inline">New User Registrations</h4>
+      <div>
+        <p class="d-inline float-right ">All Days</p>
+        <img src="./assets/icons/caret.svg" class="icon caret ">
+      </div>
+    </div>
 
-      <apx-chart [series]="areaChartOptions.series!" [chart]="areaChartOptions.chart!" [xaxis]="areaChartOptions.xaxis!"
+    <apx-chart [series]="areaChartOptions.series!" [chart]="areaChartOptions.chart!" [xaxis]="areaChartOptions.xaxis!"
       [stroke]="areaChartOptions.stroke!" [tooltip]="areaChartOptions.tooltip!"
       [dataLabels]="areaChartOptions.dataLabels!"></apx-chart>
   </div>
 
   <div class="graph-holder-2  p-4">
     <h4>Balance Overview</h4>
-    <apx-chart
-    [series]="columnChartOptions.series!"
-    [chart]="columnChartOptions.chart!"
-    [dataLabels]="columnChartOptions.dataLabels!"
-    [plotOptions]="columnChartOptions.plotOptions!"
-    [responsive]="columnChartOptions.responsive!"
-    [xaxis]="columnChartOptions.xaxis!"
-    [legend]="columnChartOptions.legend!"
-    [fill]="columnChartOptions.fill!"
-    ></apx-chart>
+    <apx-chart [series]="columnChartOptions.series!" [chart]="columnChartOptions.chart!"
+      [dataLabels]="columnChartOptions.dataLabels!" [plotOptions]="columnChartOptions.plotOptions!"
+      [responsive]="columnChartOptions.responsive!" [xaxis]="columnChartOptions.xaxis!"
+      [legend]="columnChartOptions.legend!" [fill]="columnChartOptions.fill!"></apx-chart>
   </div>
   <div class="graph-holder-3  p-4">
-    <h4>Top Products</h4>
-    <apx-chart
-    [series]="donutChartOptions.series!"
-    [chart]="donutChartOptions.chart!"
-    [labels]="donutChartOptions.labels!"
-    [responsive]="donutChartOptions.responsive!"
-    [plotOptions]="donutChartOptions.plotOptions!"
-    [colors]="donutChartOptions.colors!"
-  ></apx-chart>
+    <div class="d-flex align-items-center justify-content-between">
+      <h4 class="d-inline">Top Products</h4>
+        <img src="./assets/icons/three-dots.svg" class="icon caret ">
+    </div>
+    <apx-chart [series]="donutChartOptions.series!" [chart]="donutChartOptions.chart!"
+      [labels]="donutChartOptions.labels!" [responsive]="donutChartOptions.responsive!"
+      [plotOptions]="donutChartOptions.plotOptions!" [colors]="donutChartOptions.colors!"></apx-chart>
   </div>
 
 </div>
