@@ -7,7 +7,6 @@
 
 .header-bar {
   height: 7.6vh;
-  width: 100%;
   background-color: $base-white;
   position: sticky;
   top: 0;
@@ -52,6 +51,7 @@
       height: 2rem;
       margin: 0 0.5rem 0 0.5rem;
       border-radius: 0.2rem;
+      object-fit: cover;
     }
 
     .user {
@@ -71,20 +71,15 @@
       margin-right: 0.5rem;
 
       &.green {
-        background-color: green;
+        background-color: $green;
         transform: translate(-0.4rem, -0.6rem);
       }
 
       &.red {
-        background-color: red;
+        background-color: $red;
         transform: translateY(-0.6rem);
       }
     }
-
-
-
-
-
 
     .caret {
       width: 11px;

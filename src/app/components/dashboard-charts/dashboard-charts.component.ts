@@ -1,5 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
-import { ApexAxisChartSeries, ApexChart, ApexDataLabels, ApexFill, ApexLegend, ApexPlotOptions, ApexResponsive, ApexStroke, ApexTooltip, ApexXAxis, ChartComponent } from 'ng-apexcharts';
+import { ApexAxisChartSeries, ApexChart, ApexDataLabels, ApexFill, ApexLegend, ApexNonAxisChartSeries, ApexPlotOptions, ApexResponsive, ApexStroke, ApexTheme, ApexTooltip, ApexXAxis, ChartComponent } from 'ng-apexcharts';
 
 export type AreaChartOptions = {
   series: ApexAxisChartSeries;
@@ -21,6 +21,15 @@ export type ColumnChartOptions = {
   fill: ApexFill;
 };
 
+export type DonutChartOptions = {
+  series: ApexNonAxisChartSeries;
+  chart: ApexChart;
+  responsive: ApexResponsive[];
+  plotOptions: ApexPlotOptions;
+  labels: any;
+  colors:any;
+};
+
 @Component({
   selector: 'app-dashboard-charts',
   templateUrl: './dashboard-charts.component.html',
@@ -29,6 +38,7 @@ export type ColumnChartOptions = {
 export class DashboardChartsComponent {
   public areaChartOptions: Partial<AreaChartOptions>;
   public columnChartOptions: Partial<ColumnChartOptions>;
+  public donutChartOptions: Partial<DonutChartOptions>;
   constructor() {
     this.areaChartOptions = {
       series: [
@@ -49,7 +59,8 @@ export class DashboardChartsComponent {
       chart: {
         stacked: true,
         height: 250,
-        type: "area"
+        type: "area",
+        toolbar: { show: false }
       },
       dataLabels: {
         enabled: false
@@ -93,12 +104,6 @@ export class DashboardChartsComponent {
         type: "bar",
         height: 250,
         stacked: true,
-        // toolbar: {
-        //   show: true
-        // },
-        // zoom: {
-        //   enabled: true
-        // }
       },
       responsive: [
         {
@@ -115,11 +120,10 @@ export class DashboardChartsComponent {
       plotOptions: {
         bar: {
           columnWidth: 5,
-          horizontal: false
-        }
-      },
+          horizontal: false,
+        },
+      }, dataLabels: { enabled: false },
       xaxis: {
-        tooltip: { enabled: false },
         type: "category",
         categories: [
           "Jan",
@@ -138,11 +142,35 @@ export class DashboardChartsComponent {
       },
       legend: {
         position: "right",
-        offsetY: 40,horizontalAlign:'right'
+        offsetY: 40, horizontalAlign: 'right'
       },
       fill: {
         opacity: 1
       }
+    };
+    this.donutChartOptions = {
+      series: [50, 30, 20],
+      chart: {
+        type: "donut", height: 250,
+      }, plotOptions: {
+
+        pie: { donut: { labels: { show: true, total: { show: true, showAlways: true, label: 'Popular Items' } }, }, },
+      },
+      labels: ["Men", "Electronics", "Women"],
+      colors:["#3e5cd1","#6984ef","#90a6fd"],
+      responsive: [
+        {
+          breakpoint: 480,
+          options: {
+            chart: {
+              width: 200
+            },
+            legend: {
+              position: "bottom"
+            }
+          }
+        }
+      ]
     };
   }
 }

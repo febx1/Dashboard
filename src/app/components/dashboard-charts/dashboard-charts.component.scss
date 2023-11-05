@@ -3,10 +3,17 @@
 
 .holder {
   gap: 0.8rem;
+  height: 97%;
+
   &>* {
     @extend %dashboard-card;
     @extend .h-100;
-    padding: 1rem;
+    @extend .font-nunito;
+
+    h4 {
+
+      font-weight: 600 !important;
+    }
   }
 
   .graph-holder-1 {
