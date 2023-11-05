@@ -14,5 +14,5 @@ npm install -f
 - [Apex chart](https://apexcharts.com/)
 
 
-- ![Alt text](image.png)
+![Alt text](image.png)
 
